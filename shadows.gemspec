@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Simon Menke"]
   s.date = %q{2010-04-15}
-  s.description = %q{Like #include and #extend but for ruby source files.}
+  s.description = %q{Require shadowed files in Ruby. Or how extending code can be made better!}
   s.email = %q{simon.menke@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/shadows.rb",
+     "shadows.gemspec",
      "test/fixtures/a/four.rb",
      "test/fixtures/a/one.rb",
      "test/fixtures/b/four.rb",
@@ -37,7 +38,7 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}
-  s.summary = %q{Recursively require files.}
+  s.summary = %q{Require shadowed files in Ruby. Or how extending code can be made better.}
   s.test_files = [
     "test/fixtures/a/four.rb",
      "test/fixtures/a/one.rb",

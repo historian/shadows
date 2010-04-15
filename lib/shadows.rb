@@ -5,6 +5,7 @@ module Shadows
       
       # find the path of the caller
       caller_list = caller
+      caller_list.shift while caller_list.first.include?('active_support/dependencies')
       caller_path = caller_list.first.split(':', 2).first
       relative_caller_path = nil
       

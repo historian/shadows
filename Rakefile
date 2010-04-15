@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "shadows"
-    gem.summary = %Q{Recursively require files.}
-    gem.description = %Q{Like #include and #extend but for ruby source files.}
+    gem.summary = %Q{Require shadowed files in Ruby. Or how extending code can be made better.}
+    gem.description = %Q{Require shadowed files in Ruby. Or how extending code can be made better!}
     gem.email = "simon.menke@gmail.com"
     gem.homepage = "http://github.com/fd/shadows"
     gem.authors = ["Simon Menke"]
