@@ -1,0 +1,1 @@
+eval %{ require :shadow }, nil, __FILE__

@@ -1,6 +1,35 @@
-= rn
+= Shadows
 
-Description goes here.
+Shadows is an extention for Kernel#require which allows you to require shadowed files. This is very useful when extending some other gem. Just shadow the original file by creating a file with exacly the same relative path as the file you want to shadow. Then <tt>#require(:shadow)</tt> somewhere in your file.
+
+== Usage
+
+Suppose you have file called <tt>some_gem/some_file.rb</tt> which you want to shadow.
+
+Just create file with the same path in your gem/app (ie. <tt>some_gem/some_file.rb</tt>) and call <tt>require(:shadow)</tt> somwhere in that file.
+
+shadowed <tt>some_gem/some_file.rb</tt>:
+
+  class Person < Struct.new(:name)
+  end
+
+shadowing <tt>some_gem/some_file.rb</tt>:
+
+  require :shadow
+  
+  class Person
+    def whats_your_name?
+      "I'm #{self.name}. What's your name?"
+    end
+  end
+  
+  Person.new('Simon').whats_your_name? # => "I'm Simon. What's your name?"
+
+
+== Installation
+
+  gem install shadows
+
 
 == Note on Patches/Pull Requests
  
@@ -10,7 +39,7 @@ Description goes here.
   future version unintentionally.
 * Commit, do not mess with rakefile, version, or history.
   (if you want to have your own version, that is fine but
-   bump version in a commit by itself I can ignore when I pull)
+  bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
 == Copyright
